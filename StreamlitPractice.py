@@ -37,6 +37,18 @@ with tab1:
     fig4 = px.box(filtered_df, x="listing_type", y="reviews_per_month", title="Reviews per Month by Listing Type", color_discrete_sequence=["#3498DB"])
     st.plotly_chart(fig4)
 
+    fig5 = px.histogram(filtered_df, x="price", title="Price Distribution", color_discrete_sequence=["#1ABC9C"])
+    st.plotly_chart(fig5)
+    
+    fig6 = px.scatter(filtered_df, x="price", y="reviews_per_month", color="listing_type", title="Price vs Reviews per Month", color_discrete_sequence=["#F39C12"])
+    st.plotly_chart(fig6)
+    
+    fig7 = px.histogram(filtered_df, x="minimum_nights", title="Minimum Nights Distribution", color_discrete_sequence=["#E74C3C"])
+    st.plotly_chart(fig7)
+    
+    fig8 = px.scatter(filtered_df, x="reviews_per_month", y="minimum_nights", color="neighborhood", title="Reviews per Month vs Minimum Nights", color_discrete_sequence=["#9B59B6"])
+    st.plotly_chart(fig8)
+
 with tab2:
     st.header("Price Simulator")
     selected_neighborhood = st.selectbox("Select a neighborhood", df["neighborhood"].unique())
