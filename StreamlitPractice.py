@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 # Set the title of the dashboard
-st.title("Student Name's Airbnb Dashboard")
+st.title("Luis Torroba Airbnb Dashboard")
 
 # Load dataset
 @st.cache_data
